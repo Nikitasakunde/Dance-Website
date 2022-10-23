@@ -1,0 +1,24 @@
+doctype html 
+html 
+    head 
+        title Nikita Dance Academy
+        block Scripts   
+        block style 
+
+    body 
+        nav#navbar
+            ul
+                div#logo   
+                    img(src="/static/img/girl.png")
+                    | NDA
+
+                li #[a(href="/") Home]
+                li #[a(href="/") About] 
+                li #[a(href="/") Services] 
+                li #[a(href="/") Class info]
+                li #[a(href="/contact") Contact Us]
+        
+        
+        block content 
+        footer#footer
+            | Copyright &copy; 2022 NikitaDanceAcademy.com | All rights reserved

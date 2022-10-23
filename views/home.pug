@@ -1,0 +1,59 @@
+extends base.pug
+
+block Scripts 
+    script(src='/static/index.js')
+
+
+block style 
+        style
+            include ../static/style.css
+            include ../static/responsive.css 
+
+block content 
+        
+        section#introSection
+            div Welcome to Nikita's Dance Academy 
+            div.small Eat Sleep Dance Repeat
+
+        section#missionSection
+            h2 Our Mission
+            div.card 
+                h3 Dance Perfection
+                div.card-box 
+                    div.card-img
+                        img(src="/static/img/boy.jpg")
+
+                    div.card-content 
+                        p This is best dance academy of the Universe
+
+
+            div.card 
+                h3 Dance the way you like
+                div.card-box 
+                    div.card-img
+                        img(src="/static/img/boy1.jpg")
+
+                    div.card-content 
+                        p This is best dance academy of the Universe
+
+                        
+
+            div.card
+                h3 Expert Teaching
+                div.card-box 
+                    div.card-img
+                        img(src="/static/img/girl2.png")
+
+                    div.card-content 
+                        p This is best dance academy of the Universe
+
+                        
+
+        section#sponsorsSection
+            h2 Our Sponsors
+
+            div#sponsors 
+                img(src="/static/img/apple-logo.webp", alt="Sponsors Image" class="spImage")
+                img(src="/static/img/hp-logo.jpg", alt="Sponsors Image" class="spImage")
+                img(src="/static/img/microsoft.jpg", alt="Sponsors Image" class="spImage")
+                img(src="/static/img/skype.png", alt="Sponsors Image" class="spImage")
