@@ -10,12 +10,22 @@ main().catch(err => console.log(err));
 
 async function main() {
   await mongoose.connect('mongodb://localhost:27017/contactDance');
+
+
   
   // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
 }
 
+async function main() {
 
-// define mongoose schma
+    await mongoose.connect('mongodb://localhost:27017/servicesDance');
+  
+    // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
+  }
+
+
+
+// define mongoose contact schma
 const contactSchema = new mongoose.Schema({
     name: String,
     phone: String,
@@ -24,9 +34,19 @@ const contactSchema = new mongoose.Schema({
     desc: String,
     
 });
+// services schema
+
+const servicesSchema = new mongoose.Schema({
+    comment : String,
+    name: String,
+    email: String,
+    website: String,
+})
 
 
 const contact = mongoose.model('Contact', contactSchema);
+
+const services = mongoose.model('Services' , servicesSchema)
 
 
 // EXPRESS SPECIFIC STUFF
@@ -59,6 +79,29 @@ app.get('/contact',(req,res)=>{
     res.status(200).render('contact.pug' , params)
 })
 
+app.get('/about' , (req,res)=>{
+    const params ={}
+    res.status(200).render('about.pug' , params)
+})
+
+app.get('/services' , (req , res)=>{
+    const params ={}
+    res.status(200).render('services.pug' , params)
+})
+
+app.get('/classInfo' , (req ,res)=>{
+    const params ={}
+    res.status(200).render('class.pug' , params)
+})
+
+app.get('/#sponsorsSection',(req,res)=>{
+    const params = {}
+    res.status(200).render('home.pug' , params)
+})
+
+
+
+
 
 // mongoose related stuff
 app.post('/contact',(req,res)=>{
@@ -71,6 +114,28 @@ app.post('/contact',(req,res)=>{
 
     // res.status(200).render('contact.pug')
 })
+
+app.post('/about' , (req, res)=>{
+    res.status(200).render('about.pug')
+})
+
+
+
+app.post('/services' ,(req , res)=>{
+    var data = new services(req.body);
+    data.save().then(()=>{
+        res.send("This item is saved in database")
+    }).catch(()=>{
+        res.status(400).send("Item was not saved to database")
+    })
+    // res.status(200).render('sevices.pug')
+})
+
+app.post('/classInfo' , (req ,res)=>{
+    res.status(200).render('class.pug')
+})
+
+
 
 
 

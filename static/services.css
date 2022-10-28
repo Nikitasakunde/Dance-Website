@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form #comment , .myInput{
+    border: none;
+}
+.container form input{
+    border: none;
+}
+form textarea{
+    outline: none;
+}
+
+p{
+    font-size: 17px;
+}
+p input{
+    display: inherit;
+}
+
+
+
+#footer{
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 455px;
+
+
+}

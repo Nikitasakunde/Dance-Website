@@ -151,7 +151,55 @@
     margin: 20px;
 }
 
+.container4{
+    background-color: #6e3333;
+    line-height: 3.5;
+}
+.container4 #logo{
+    display: flex;
+    color: white;
+    align-items: center;
+    margin: -8px 14px;
+    font-size: 22px;
+    margin-right: 40px;
 
+}
+
+.container4 #logo img{
+    height: 280px;
+    filter: invert(1);
+}
+.container2 #logo p{
+    font-size: 75px;
+    margin-left: -93px;
+}
+
+.container4 #logo .box1{
+    margin-left: 99px;
+    width: 235px;
+}
+
+.container4 #logo .box2 img{
+   height: 28px;
+}
+.container4 #logo .box2{
+
+    margin-left: 155px;
+
+}
+.container4 #logo .box3{
+    margin-left: -53px;
+
+}
+
+
+.container4 #logo .box3  li img{
+    height: 44px;
+}
+
+.container4 #logo .box3  li img:hover{
+    cursor: pointer;
+}
 
 #footer{
     height: 60px;

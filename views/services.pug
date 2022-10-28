@@ -1,0 +1,34 @@
+extends base.pug
+
+block Scripts 
+    script(src='/static/index.js')
+
+
+block style 
+        style
+            include ../static/style.css
+            include ../static/services.css
+            include ../static/styleContact.css
+
+
+
+block content 
+    div.container
+        h1 POST A COMMENT 
+            form(action="/services", method = "post" class="myForm")
+                textarea(name="comment" id ="comment" cols="70" rows="20" placeholder="Type here..")
+                input(type="text" class="myInput" name="name" placeholder="Name") 
+                input(type="email" class="myInput" name="email" placeholder="Email...") 
+                input(type="text" class="myInput" name="website" placeholder="Website") 
+
+                p
+                    input(type="checkbox" class="myInput" name="website" placeholder="Website" value="yes") 
+                    p save my name, email, and website in this browser for the next time I comment.   
+
+                p
+                    input(type="checkbox" class="myInput" name="website" placeholder="Website") 
+                    p  Notify me by email when the comment gets approved.
+
+
+                button(class="btn")
+                    | Submit

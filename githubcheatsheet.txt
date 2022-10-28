@@ -13,6 +13,8 @@ git commit -m "Initial commit"
 git status # just to see
 ssh-keygen -t rsa -b 4096 -C "nikitasakunde3@gmail.com"
 
+
+# How to generate an ssh key on internet and copy the path
 tail <path to id_rsa.pub>  # add this key to github
 git remote add origin <ssh url.git>
 git push origin master

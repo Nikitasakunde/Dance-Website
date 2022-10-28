@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 75vh;
+    margin: 43px 0;
+}
+.container h1{
+    color: black;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 36px;
+}
+.container2{
+    /* background-color: #6e3333; */
+    line-height: 3.5;
+}
+
+.container2{
+    margin: 30px;
+    margin-left: 181px;
+}
+.container3{
+    margin-left: 204px;
+    margin-right: 204px;
+}
+
+.container3 p{
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+
+#footer{
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 1000px;
+
+
+}

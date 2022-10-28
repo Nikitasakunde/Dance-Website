@@ -1,0 +1,103 @@
+extends base.pug
+
+block Scripts 
+    script(src="/static/index.js")         
+
+block style 
+    style 
+        include ../static/style.css 
+        include ../static/class.css
+
+block content 
+    div.cont1 
+        h2 TLPTI Online Courses are designed with the philosophy of ABCD 
+        br
+        br
+        p Any Body can dance from Anywhere in the world, 
+        br 
+        | Anytime. Our motto is to spread the Joy of Dance 
+        br
+        | and hence our courses are affordable and 
+        br
+        | conveneient so that we can empower Everyone to 
+        br
+        | Dance for your Happiness! 
+
+        img(src="", alt="", srcset="")
+
+    div.cont2 
+        h1 COURSES 
+        div.bo1 
+            img(src="", alt="", srcset="")
+            p 150+
+            |  classes per month
+
+        div.bo2
+            img(src="", alt="", srcset="")
+            p 15k+
+            |  Students in our online family
+
+        div.bo3
+            img(src="", alt="", srcset="")
+            p 4k
+            |  Students certified online
+
+
+    div.cont3 
+        h1 STUDENTS SPEAK
+        video(src=" ") 
+        img(src="", alt="", srcset="")
+
+    div.cont4 
+        h2 Dance for your Happiness! 
+        hr
+
+
+        p Affordable price points- as low as $10/- per class 
+        br
+        | Contact us by filling the form. Link has been given below.
+        li #[a(href="http://localhost:8000/contact") http://localhost:8000/contact]
+
+        hr
+
+        h3 Live learning in real time 
+        br
+        | with your instructor + 
+        br 
+        | TUTORIALS to practise at your convenience!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-         div.navbar
+//-         nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+//-             <div class="container-fluid">
+//-             <div class="navbar-header">
+//-             <a class="navbar-brand" href="#">company name</a>
+//-             </div>
+//-             <ul class="nav navbar-nav navbar-right ">
+//-             <li><a href="#" style="color:blue;" data-page="about">About</a></li>
+//-             <li><a href="#" style="color:blue;" data-page="portfolio">Portfolio</a></li>
+//-             <li><a class="portfolio-scroll" href="#" style="color:blue;" id="contact-nav" data-page="contact">Contact</a></li>
+//-             </ul>
+//-         </div>
+            
+//-             <div class="page" id="about"><h1>About</h1></div>
+//-             <div class="page" id="portfolio"><h1>Portfolio</h1></div>
+//-             <div class="page" id="contact"><h1>Contact</h1></div>
+//-         </nav>

@@ -1,0 +1,37 @@
+.cont1{
+    background-color: black;
+    color: white;    
+    height: 439px;
+    text-align: center;
+
+}
+.cont2 h1{
+    text-align: center;
+}
+.cont2{
+    text-align: center;
+    height: 260px;
+}
+
+.cont3{
+    text-align: center;
+    height: 400px;
+    background: rgb(253, 253, 116);
+}
+.cont4{
+    text-align: center;
+    margin-bottom: 84px;
+}
+.cont4 h2{
+    margin-top: 42px;
+    margin-bottom: 55px;
+}
+.cont4 p{
+    margin-top: 42px;
+}
+.cont4 li{
+    margin-bottom: 77px;
+}
+.cont4 h3{
+    margin-top: 42px;
+}

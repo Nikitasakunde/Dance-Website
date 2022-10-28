@@ -1,15 +1,23 @@
-extends base.pug
-
-block Scripts 
-    script(src='/static/index.js')
-
-
-block style 
+doctype html 
+html
+    head 
+        title Nikita's Dance Academy
         style
             include ../static/style.css
-            include ../static/responsive.css 
+    body 
+        nav#navbar
+            ul
+                div#logo   
+                    img(src="/static/img/girl.png")
+                    | NDA
 
-block content 
+                li #[a(href="/") Home]
+                li #[a(href="/") About] 
+                li #[a(href="/") Services] 
+                li #[a(href="/") Class info]
+                li #[a(href="/") Our Sponsors]
+                li #[a(href="/") Contact Us]
+
         
         section#introSection
             div Welcome to Nikita's Dance Academy 
@@ -59,14 +67,13 @@ block content
                 img(src="/static/img/skype.png", alt="Sponsors Image" class="spImage")
 
 
-        
-        div.container4
+        div.container2
             div#logo
                 img(src="/static/img/girl.png")
-                p NDA
+                | NDA
 
                 div.box1
-                    h3 Dance Classes
+                    h6 Dance Classes
                     ul
                         li Contemporary
                         li Jazz Funk
@@ -74,28 +81,26 @@ block content
                         li Blogs
 
                 div.box2
-                    h3 Get in Touch
+                    h6 Get in Touch
                     ul
-                      
-                        img(src="/static/img/location.svg", alt="", srcset="")
-                        |    Rose Manor High School, Central avenue Road, Santacruz West.
-                        br
-
-                        img(src="/static/img/phone.svg", alt="", srcset="")
-                        |  +91 7375006833
-
-                        br
-                        img(src="/static/img/email.svg", alt="", srcset="")
-                        |  info@ssda.in
+                        li Rose Manor High School, Central avenue Road, Santacruz West.
+                        li +91 7375006833
+                        li info@ssda.in
 
                 div.box3
-                    h3 Social Connect
+                    h6 Social Connect
                     ul
-                        li #[a(href="https://www.linkedin.com/in/nikita-sakunde-0b3413225/") #[img(src="/static/img/in.png", alt="", srcset="")]]
-
-                        li #[a(href="https://www.codechef.com/users/nikita755") #[img(src="/static/img/codechef2.jpg", alt="", srcset="")]]
-
-                        li #[a(href="https://github.com/Nikitasakunde")]#[img(src="/static/img/github.png", alt="", srcset="")]
+                        li 
+                        li 
+                        li                      
 
 
 
+
+        footer#footer
+            | Copyright &copy; 2022 NikitaDanceAcademy.com | All rights reserved
+
+
+
+        script  
+            include ../static/index.js
