@@ -1,37 +1,62 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 const bodyparser = require("body-parser")
+const { MongoClient } = require('mongodb');
 
 const mongoose = require('mongoose');
+
+app.use(express.json());
+app.use(bodyparser.urlencoded(
+    {
+    extended : true
+    }
+))
+
+
+main().catch(err => console.log(err));
+
+
+
 
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/contactDance');
-
-
-  
-  // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
+    const monngodb_url = "mongodb://root:root@ac-fwz7lfs-shard-00-00.h31lqor.mongodb.net:27017,ac-fwz7lfs-shard-00-01.h31lqor.mongodb.net:27017,ac-fwz7lfs-shard-00-02.h31lqor.mongodb.net:27017/contact?ssl=true&replicaSet=atlas-jyubpb-shard-0&authSource=admin&retryWrites=true&w=majority"
+    await mongoose.connect(monngodb_url, {useNewUrlParser: true,useUnifiedTopology: true}).then(()=>{
+        console.log("mongodb is connected");
+    }).catch((error)=>{
+        console.log("mongodb not connected");
+        console.log(error);
+    });
 }
 
-async function main() {
 
-    await mongoose.connect('mongodb://localhost:27017/servicesDance');
-  
-    // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
-  }
+
+// main().catch(err => console.log(err));
+
+async function main() {
+    const monngodb_url = "mongodb://root:root@ac-fwz7lfs-shard-00-00.h31lqor.mongodb.net:27017,ac-fwz7lfs-shard-00-01.h31lqor.mongodb.net:27017,ac-fwz7lfs-shard-00-02.h31lqor.mongodb.net:27017/service?ssl=true&replicaSet=atlas-jyubpb-shard-0&authSource=admin&retryWrites=true&w=majority"
+    await mongoose.connect(monngodb_url, {useNewUrlParser: true,useUnifiedTopology: true}).then(()=>{
+        console.log("mongodb is connected");
+    }).catch((error)=>{
+        console.log("mongodb not connected");
+        console.log(error);
+    });
+}
+
+
+
 
 
 
 // define mongoose contact schma
 const contactSchema = new mongoose.Schema({
     name: String,
-    phone: String,
     email: String,
     address: String,
-    desc: String,
+    desc: String
     
 });
 // services schema
@@ -44,7 +69,7 @@ const servicesSchema = new mongoose.Schema({
 })
 
 
-const contact = mongoose.model('Contact', contactSchema);
+const contact = mongoose.model('Contacts', contactSchema);
 
 const services = mongoose.model('Services' , servicesSchema)
 
@@ -62,6 +87,7 @@ app.set('view engine' , 'pug')
 
 // set the view directory
 app.set('views' , path.join(__dirname , 'views'))
+
 
 
 
@@ -140,6 +166,7 @@ app.post('/classInfo' , (req ,res)=>{
 
 
 
-app.listen(port ,()=>{
-    console.log(`The application started successfully on port ${port}`);
+app.listen(port  , ()=>{
+    console.log(`The application started successfully on port localhost:${port}`);
 })
+ 
